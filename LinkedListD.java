@@ -21,12 +21,10 @@ public class LinkedListD { // Doubly linked list (makes use of "prev" and "next"
             last = first;
             nodeAmount = 1;
         }
-        else{
-            Node aux = first;
-            first = new Node(value);
-            first.setNext(aux);
+            Node aux = new Node(value);
+            aux.setNext(first);
+            first = aux;
             nodeAmount++;
-        }
     }
     public void InsertAtEnd(int value){
         Node newNode;
