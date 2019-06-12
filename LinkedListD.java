@@ -22,9 +22,9 @@ public class LinkedListD { // Doubly linked list (makes use of "prev" and "next"
             nodeAmount = 1;
         }
         else{
-            Node aux = new Node(value);
-            aux.setNext(first);
-            first = aux;
+            Node aux = first;
+            first = new Node(value);
+            first.setNext(aux);
             nodeAmount++;
         }
     }
